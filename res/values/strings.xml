@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">NinoVino</string>
+    <string name="hello_world">Hello world!</string>
+	<string name="menu_principal">Bienvenu dans votre cave NinoVino</string>
+	<string name="consultation">Consultation de la cave</string>
+	<string name="ajout">Ajouter un vin</string>
+	<string name="retrait">Retirer un vin</string>
+	<string name="nom_producteur">Nom du producteur</string>
+	<string name="ajout_cave">Ajouter à la cave</string>
+	<string name="code_bar">Lecture du code barre</string>
+		<string name="recher_supr">Rechercher</string>
+		<string name="quantite_defaut">1</string>
+		<string name="recherche">Rechercher une liste de vin</string>
+		<string name="zoom_vin">Informations détaillées sur un vin</string>
+		
+</resources>

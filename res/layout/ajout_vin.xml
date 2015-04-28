@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    
+    <Spinner
+    android:id="@+id/s_couleur_ajout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+     <Spinner
+    android:id="@+id/s_region_ajout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+    
+    <Spinner
+    android:id="@+id/s_appelation_ajout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+    
+  <Spinner
+    android:id="@+id/s_millesime_ajout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+   
+   <EditText 
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:hint="@string/nom_producteur"
+       android:id="@+id/Etxt_nom_prod_ajout"
+       />  
+     
+    <Button
+	    android:id="@+id/bouton"
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content" 
+		android:text="@string/code_bar"
+    	/>
+    
+    <EditText 
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:hint="@string/quantite_defaut"
+       android:id="@+id/Etxt_quantite"
+       />  
+    
+      <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ajout_cave" />
+    
+
+    <Button
+	    android:id="@+id/b_ajout_vin"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content" 
+    	android:background="@drawable/ic_launcher"
+    	/>
+      </LinearLayout>
+    
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="region_array">
+        <item>Pays de la Loire</item>
+        <item>Alsace</item>
+        <item>Jura</item>
+        <item>Bourgogne</item>
+        <item>Rhone</item>
+        <item>Provence</item>
+        <item>Languedoc-Roussillon</item>
+        <item>Bordeaux</item>
+        <item>Corse</item>
+        <item>Etrangers</item>
+    </string-array>
+
+</resources>

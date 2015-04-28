@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+     <TextView
+         android:id="@+id/Txt_region"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Région : " />
+     
+     <TextView
+         android:id="@+id/Txt_region_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="A éditer" />
+     
+       </LinearLayout>
+      <TextView
+          android:id="@+id/Txt_appelation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Appelation" />
+ 	<TextView
+          android:id="@+id/Txt_nom_prod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nom_producteur" />
+ 		
+    <TextView
+          android:id="@+id/Txt_millesime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Millesime" />
+    
+     <TextView
+          android:id="@+id/Txt_quantite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantité" />
+    
+     <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    
+         <Button
+	    android:id="@+id/b_Ajout"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content" 
+		android:text="+"
+    	/>
+          <Button
+	    android:id="@+id/b_supr_vin"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content" 
+		android:text="-"
+    	/>
+         
+     </LinearLayout>
+     
+</LinearLayout>

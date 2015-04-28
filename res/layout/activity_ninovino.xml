@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}"
+    android:orientation = "vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_principal" />
+    
+    <Button
+	    android:id="@+id/b_consultation_cave"
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content" 
+    	android:text="@string/consultation"
+    	/>
+    
+    <Button
+	    android:id="@+id/b_ajout_vin"
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content" 	
+    	android:text="@string/ajout"
+    	/>
+    
+    <Button
+	    android:id="@+id/b_supression_vin"
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content" 
+    	android:text="@string/retrait"
+    	/>
+
+</LinearLayout>
