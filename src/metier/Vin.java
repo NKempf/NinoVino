@@ -2,88 +2,87 @@ package metier;
 
 public class Vin {
 
-	public String id, region, appelation, producteur, millesime;
-	public int quantite;
+	public int id, type, region, appelation, millesime, quantite;
+	public String producteur;
 	
-	@Override
-	public String toString() {
-		return "Région : " + region + ", Appelation : "
-				+ appelation + "/n producteur : " + producteur + ", Millesime : "
-				+ millesime ;
-	}
-
-
-	public Vin(String id, String region, String appelation, String producteur,
-			String millesime, int quantite) {
+	public Vin(int id, int type, int region, int appelation, String producteur, int millesime,
+			int quantite) {
 		super();
 		this.id = id;
+		this.type = type;
 		this.region = region;
 		this.appelation = appelation;
-		this.producteur = producteur;
 		this.millesime = millesime;
 		this.quantite = quantite;
+		this.producteur = producteur;
 	}
 
-
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
-
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
+	public int getType() {
+		return type;
+	}
 
-	public String getRegion() {
+	public void setType(int type) {
+		this.type = type;
+	}
+
+	public int getRegion() {
 		return region;
 	}
 
-
-	public void setRegion(String region) {
+	public void setRegion(int region) {
 		this.region = region;
 	}
 
-
-	public String getAppelation() {
+	public int getAppelation() {
 		return appelation;
 	}
 
-
-	public void setAppelation(String appelation) {
+	public void setAppelation(int appelation) {
 		this.appelation = appelation;
 	}
 
-
-	public String getProducteur() {
-		return producteur;
-	}
-
-
-	public void setProducteur(String producteur) {
-		this.producteur = producteur;
-	}
-
-
-	public String getMillesime() {
+	public int getMillesime() {
 		return millesime;
 	}
 
-
-	public void setMillesime(String millesime) {
+	public void setMillesime(int millesime) {
 		this.millesime = millesime;
 	}
-
 
 	public int getQuantite() {
 		return quantite;
 	}
 
-
 	public void setQuantite(int quantite) {
 		this.quantite = quantite;
 	}
+
+	public String getProducteur() {
+		return producteur;
+	}
+
+	public void setProducteur(String producteur) {
+		this.producteur = producteur;
+	}
+
+	@Override
+	public String toString() {
+		return "Vin [id=" + id + ", type=" + type + ", region=" + region
+				+ ", appelation=" + appelation + ", millesime=" + millesime
+				+ ", quantite=" + quantite + ", producteur=" + producteur + "]";
+	}
 	
+	
+
+
 	
 	
 	
