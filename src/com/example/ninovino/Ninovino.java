@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 
 
+
 import metier.Vin;
 import android.app.Activity;
 import android.database.Cursor;
@@ -40,6 +41,8 @@ public class Ninovino extends Activity implements OnClickListener{
 	public SQLiteOpenHelper helper;
 	public Bdd base;
 	
+	// Déclarations des constantes pour les différentes tables de la base
+	
 	private static final String TABLE_REGION = "region";
 	private static final String COL_REG_ID = "id_reg";
 	private static final String COL_REG_NOM = "nom";
@@ -58,27 +61,164 @@ public class Ninovino extends Activity implements OnClickListener{
 	private static final String COL_VIN_QUANTI = "quantite";	
 	
 	
+	// Insertion des données dans les tables 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_ninovino);
-		//gestion de la base
-		//new Bdd(this).getWritableDatabase();
- 
-		Bdd base = new Bdd(this);
-		base.insertion_region("Alsace");
-		base.insertion_region("Champagne");
-		base.insertion_Mill("1980");
+ 		Bdd base = new Bdd(this);
+ 		
+ 		// insertion dans la table "REGION"
+		// SOURCE : http://avis-vin.lefigaro.fr/connaitre-deguster/tout-savoir-sur-le-vin/guide-des-regions-et-des-appellations
+ 		base.insertion_region("Alsace");
+		base.insertion_region("Champagne");	
+		base.insertion_region("Bourgogne");
+		base.insertion_region("Vallée de la Loire");
+		base.insertion_region("Jura");
+		base.insertion_region("Beaujolais");
+		base.insertion_region("Vallée du Rhone");
+		base.insertion_region("Savoie et Bugey");
+		base.insertion_region("Provence");
+		base.insertion_region("Languedoc");
+		base.insertion_region("Roussillon");
+		base.insertion_region("Sud-Ouest");
+		base.insertion_region("Bordeaux");
+		base.insertion_region("Poitou-Charente");
+ 		
+ 		
+		// insertion dans la table "MILLESIME"
+ 		
+ 		base.insertion_Mill("1980");
 		base.insertion_Mill("1981");
+		base.insertion_Mill("1982");
+		base.insertion_Mill("1983");
+		base.insertion_Mill("1984");
+		base.insertion_Mill("1985");
+		base.insertion_Mill("1986");
+		base.insertion_Mill("1987");
+		base.insertion_Mill("1988");
+		base.insertion_Mill("1989");
+		base.insertion_Mill("1990");
+		base.insertion_Mill("1991");
+		base.insertion_Mill("1992");
+		base.insertion_Mill("1993");
+		base.insertion_Mill("1994");
+		base.insertion_Mill("1995");
+		base.insertion_Mill("1996");
+		base.insertion_Mill("1997");
+		base.insertion_Mill("1998");
+		base.insertion_Mill("1999");
+		base.insertion_Mill("2000");
+		base.insertion_Mill("2001");
+		base.insertion_Mill("2002");
+		base.insertion_Mill("2003");
+		base.insertion_Mill("2004");
+		base.insertion_Mill("2005");
+		base.insertion_Mill("2006");
+		base.insertion_Mill("2007");
+		base.insertion_Mill("2008");
+		base.insertion_Mill("2009");
+		base.insertion_Mill("2010");
+		base.insertion_Mill("2011");
+		base.insertion_Mill("2012");
+		base.insertion_Mill("2013");
+		base.insertion_Mill("2014");
+		base.insertion_Mill("2015");
+		base.insertion_Mill("2016");
+		base.insertion_Mill("2017");
+		base.insertion_Mill("2018");
+		base.insertion_Mill("2019");
+		
+		
+		// insertion dans la table "APPELATION"
+		
 		base.insertion_Appel("Gewurztraminer", 1);
+		base.insertion_Appel("Pinot Gris", 1);
+		base.insertion_Appel("Pinot Noir", 1);
+		base.insertion_Appel("Riesling", 1);
+		base.insertion_Appel("Sylvaner", 1);
+		base.insertion_Appel("Muscat", 1);
+		base.insertion_Appel("Champagne", 2);
+		base.insertion_Appel("Chablis", 3);
+		base.insertion_Appel("Côte Chalonnaise", 3);
+		base.insertion_Appel("Côte de Beaune", 3);
+		base.insertion_Appel("Côte de Nuits", 3);
+		base.insertion_Appel("Coteaux-du-Layon", 3);
+		base.insertion_Appel("Cléry", 4);
+		base.insertion_Appel("Saumur", 4);
+		base.insertion_Appel("Bourgueil", 4);
+		base.insertion_Appel("Cheverny", 4);
+		base.insertion_Appel("Chinon", 4);
+		base.insertion_Appel("Saint-Nicolas-de-Bourgueil", 4);
+		base.insertion_Appel("Vouvray", 4);
+		base.insertion_Appel("Arbois", 5);
+		base.insertion_Appel("Côtes-du-Jura", 5);
+		base.insertion_Appel("Vin jaune", 5);
+		base.insertion_Appel("Vin de paille", 5);
+		base.insertion_Appel("Beaujolais-villages", 6);
+		base.insertion_Appel("Brouilly", 6);
+		base.insertion_Appel("Chénas", 6);
+		base.insertion_Appel("Chiroubles", 6);
+		base.insertion_Appel("Côte-de-brouilly", 6);
+		base.insertion_Appel("Fleurie", 6);
+		base.insertion_Appel("Juliénas", 6);
+		base.insertion_Appel("Morgon", 6);
+		base.insertion_Appel("Moulin-à-vent", 6);
+		base.insertion_Appel("Beaumes-de-venise", 7);
+		base.insertion_Appel("Châteauneuf-du-pape", 7);
+		base.insertion_Appel("Côte-rôtie", 7);
+		base.insertion_Appel("Crozes-hermitage", 7);
+		base.insertion_Appel("Côtes-du-rhône", 7);
+		base.insertion_Appel("Clairette-de-die", 7);
+		base.insertion_Appel("Bugey", 8);
+		base.insertion_Appel("Crépy", 8);
+		base.insertion_Appel("Savoie", 8);
+		base.insertion_Appel("Seyssel", 8);
+		base.insertion_Appel("Roussette-de-savoie", 8);
+		base.insertion_Appel("Bandol", 9);
+		base.insertion_Appel("Baux-de-provence", 9);
+		base.insertion_Appel("Bellet", 9);
+		base.insertion_Appel("Côtes-de-provence", 9);
+		base.insertion_Appel("Cassis", 9);
+		base.insertion_Appel("Corbières", 10);
+		base.insertion_Appel("Fitou", 10);
+		base.insertion_Appel("Faugères", 10);
+		base.insertion_Appel("Minervois", 10);
+		base.insertion_Appel("Saint-chinian", 10);
+		base.insertion_Appel("Banyuls", 11);
+		base.insertion_Appel("Collioure", 11);
+		base.insertion_Appel("Côtes-du-roussillon", 11);
+		base.insertion_Appel("Rivesaltes", 11);
+		base.insertion_Appel("Maury", 11);
+		base.insertion_Appel("Buzet", 12);
+		base.insertion_Appel("Cahors", 12);
+		base.insertion_Appel("Côtes-du-marmandais", 12);
+		base.insertion_Appel("Fronton", 12);
+		base.insertion_Appel("Pécharmant", 12);
+		base.insertion_Appel("Cadillac", 13);
+		base.insertion_Appel("Fronsac", 13);
+		base.insertion_Appel("Graves", 13);
+		base.insertion_Appel("Margaux", 13);
+		base.insertion_Appel("Médoc", 13);
+		base.insertion_Appel("Pomerol", 13);
+		base.insertion_Appel("Saint-estèphe", 14);
+		base.insertion_Appel("Saint-julien", 14);
+		base.insertion_Appel("Sauternes", 14);
+		base.insertion_Appel("Pineau-des-charentes", 14);
+		base.insertion_Appel("Haut-poitou", 14);
+		
+		
+		// Insertion des régions dans la table Régions de la Base de données macave
+		base.insertionType("Blanc");
+		base.insertionType("Rouge");
+		base.insertionType("Rosé");
+		base.insertionType("Pétillant");
+		
+		// insertion dans la table "VIN"
+		
 		base.insertionVin(1, 1, 1, "Arno", 1, 10);
-		
+
 		helper=base;
-		
-		
-		
-		
-		
 		
 		
 		
@@ -290,8 +430,8 @@ public class Ninovino extends Activity implements OnClickListener{
         //Si la region existe (mais normalement il ne devrait pas)
 		
 //		"Le millesime est " + getMill("1980")
-		Toast.makeText(this, "La region est " + getNomRegion("Alsace") +
-				"Le millesime est " + getMill("1980") + " L'appelation est " 
+		Toast.makeText(this, "La region est " + getNomRegion("Alsace") + 
+				" Le millesime est " + getMill("1980") + " L'appelation est " 
 				+ getAppelation("Gewurztraminer") +
 				" Producteur " + getVin("Arno"), Toast.LENGTH_LONG).show();
 		

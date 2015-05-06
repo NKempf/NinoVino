@@ -9,11 +9,12 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class Bdd extends SQLiteOpenHelper{
 
 	
-	//TUTO : http://a-renouard.developpez.com/tutoriels/android/sqlite/
+//TUTO : http://a-renouard.developpez.com/tutoriels/android/sqlite/
 //	TUTO ANGLAIS : http://www.androidhive.info/2013/09/android-sqlite-database-with-multiple-tables/
 	private static final int DATABASE_VERSION = 4;
 	private static final String DATABASE_NAME = "notrecave";
 	
+	// Déclarations des constantes pour les différentes tables de la base
 	private static final String TABLE_REGION = "region";
 	private static final String COL_REG_ID = "id_reg";
 	private static final String COL_REG_NOM = "nom";
@@ -30,6 +31,17 @@ public class Bdd extends SQLiteOpenHelper{
 	private static final String COL_VIN_ID = "id_vin";
 	private static final String COL_VIN_PROD = "producteur";
 	private static final String COL_VIN_QUANTI = "quantite";	
+	
+	
+	
+	private static final String CREATE_BDD_REGION = "CREATE TABLE "+TABLE_REGION+" ("
+			+COL_REG_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "
+			+ COL_REG_NOM +" TEXT);";
+	
+	
+	private static final String CREATE_BDD_MILL = "CREATE TABLE "+TABLE_MILL+" ("
+			+COL_MILL_ID+" INTEGER PRIMARY KEY AUTOINCREMENT,"
+			+ COL_MILL_ANNEE+" TEXT);";
 	
 	private static final String CREATE_BDD_VIN = "CREATE TABLE " + TABLE_VIN + " ("
 			+ COL_VIN_ID+ " INTEGER PRIMARY KEY AUTOINCREMENT, " 
@@ -62,15 +74,12 @@ public class Bdd extends SQLiteOpenHelper{
 //		db.execSQL("CREATE TABLE vin (id TEXT PRIMARY KEY, nom TEXT, region TEXT, id_appelation TEXT FOREIGN KEY,"
 //				+ " producteur TEXT, id_millesime TEXT FOREIGN KEY, id_type TEXT FOREIGN KEY, quantite INTEGER)");
 //		db.execSQL("CREATE TABLE appelation (id TEXT PRIMARY KEY, nom TEXT, id_region TEXT FOREIGN KEY)");
-		db.execSQL("CREATE TABLE "+TABLE_REGION+" ("+COL_REG_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "
-				+ COL_REG_NOM +" TEXT)");
-		db.execSQL("CREATE TABLE "+TABLE_MILL+" ("+COL_MILL_ID+" INTEGER PRIMARY KEY AUTOINCREMENT,"
-				+ COL_MILL_ANNEE+" TEXT)");
+		db.execSQL(CREATE_BDD_REGION);
+		db.execSQL(CREATE_BDD_MILL);
 		db.execSQL(CREATE_BDD_APP);
 		db.execSQL(CREATE_BDD_TYPE);
 		db.execSQL(CREATE_BDD_VIN);
-				
-	}
+			}
 	
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -83,6 +92,7 @@ public class Bdd extends SQLiteOpenHelper{
 		
 	}
 	
+	// Méthodes d'insertion dans les tables 
 	
 	public long insertion_region (String region){
 		SQLiteDatabase writableDB = this.getWritableDatabase();
